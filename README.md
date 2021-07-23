@@ -5,8 +5,9 @@ Dibuat Dengam :
 - Flutter Version : `Flutter 2.2.3 • channel stable` Null Safety
 - VS Code
 ## Halaman Dashboard
-<img src="assets/readme/dashboard.jpg" width="260px">
+UI HashData & HasError from internet
 
+<img src="assets/readme/has_data.jpg" width="260px"> <img src="assets/readme/has_error.jpg" width="260px">
 ## API Spec
 
 GET Data Indonesia :
