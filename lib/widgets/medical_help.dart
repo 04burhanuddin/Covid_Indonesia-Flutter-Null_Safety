@@ -47,7 +47,7 @@ class MedicalHelp extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "Dial 119 For nMedical Help!",
+                        "Dial 119 For Medical Help!",
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.w500,
