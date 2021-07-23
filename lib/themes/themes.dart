@@ -14,7 +14,7 @@ Color colorCard = Colors.white;
 // text title
 TextStyle textndonesia = GoogleFonts.roboto(
   fontSize: 27,
-  color: Colors.black.withOpacity(0.6),
+  color: Colors.white,
   fontWeight: FontWeight.bold,
 );
 

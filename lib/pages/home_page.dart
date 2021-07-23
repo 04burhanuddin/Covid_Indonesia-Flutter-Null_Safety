@@ -1,8 +1,10 @@
 import 'dart:async';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:covid_indonesia/widgets/themes.dart';
+import 'package:covid_indonesia/themes/themes.dart';
+import 'package:covid_indonesia/widgets/prevention.dart';
+import 'package:covid_indonesia/widgets/people_card.dart';
+import 'package:covid_indonesia/widgets/medical_help.dart';
 import 'package:covid_indonesia/model/indonesia_cases.dart';
 
 Future<DataIndonesia> getDataIndonesia() async {
@@ -26,7 +28,7 @@ class HomeApp extends StatefulWidget {
 }
 
 class _HomeAppState extends State<HomeApp> {
-  final String orang = "Orang";
+  final String textPeople = "People";
   late Future<DataIndonesia> dataIndonesia;
 
   @override
@@ -62,7 +64,7 @@ class _HomeAppState extends State<HomeApp> {
                       ),
                       Center(
                         child: Text(
-                          "Data Indonesia",
+                          "Data Covid Indonesia",
                           style: textndonesia,
                         ),
                       ),
@@ -98,7 +100,7 @@ class _HomeAppState extends State<HomeApp> {
                                         ),
                                       ),
                                       Text(
-                                        "Positif",
+                                        "Positive",
                                         style: TextStyle(
                                           fontSize: 20,
                                           color: textPositif,
@@ -126,19 +128,7 @@ class _HomeAppState extends State<HomeApp> {
                                   SizedBox(
                                     height: 10,
                                   ),
-                                  Row(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                          left: 15,
-                                        ),
-                                        child: Text(
-                                          orang,
-                                          style: textCard,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                  PeopleCard(textPeople: textPeople),
                                 ],
                               ),
                               color: Colors.white,
@@ -164,7 +154,7 @@ class _HomeAppState extends State<HomeApp> {
                                         ),
                                       ),
                                       Text(
-                                        "Dirawat",
+                                        "Active",
                                         style: TextStyle(
                                           fontSize: 20,
                                           color: textDirawat,
@@ -192,19 +182,7 @@ class _HomeAppState extends State<HomeApp> {
                                   SizedBox(
                                     height: 10,
                                   ),
-                                  Row(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                          left: 15,
-                                        ),
-                                        child: Text(
-                                          orang,
-                                          style: textCard,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                  PeopleCard(textPeople: textPeople),
                                 ],
                               ),
                               color: Colors.white,
@@ -230,7 +208,7 @@ class _HomeAppState extends State<HomeApp> {
                                         ),
                                       ),
                                       Text(
-                                        "Sembuh",
+                                        "Recovered",
                                         style: TextStyle(
                                           fontSize: 20,
                                           color: textSembuh,
@@ -258,19 +236,7 @@ class _HomeAppState extends State<HomeApp> {
                                   SizedBox(
                                     height: 10,
                                   ),
-                                  Row(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                          left: 15,
-                                        ),
-                                        child: Text(
-                                          orang,
-                                          style: textCard,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                  PeopleCard(textPeople: textPeople),
                                 ],
                               ),
                               color: Colors.white,
@@ -296,7 +262,7 @@ class _HomeAppState extends State<HomeApp> {
                                         ),
                                       ),
                                       Text(
-                                        "Meninggal",
+                                        "Death",
                                         style: TextStyle(
                                           fontSize: 20,
                                           color: textMeniggal,
@@ -324,19 +290,7 @@ class _HomeAppState extends State<HomeApp> {
                                   SizedBox(
                                     height: 10,
                                   ),
-                                  Row(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                          left: 15,
-                                        ),
-                                        child: Text(
-                                          orang,
-                                          style: textCard,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                  PeopleCard(textPeople: textPeople),
                                 ],
                               ),
                               color: Colors.white,
@@ -374,156 +328,15 @@ class _HomeAppState extends State<HomeApp> {
                   return Padding(
                     padding: const EdgeInsets.all(50),
                     child: Center(
-                      child: CircularProgressIndicator(),
+                      child: CircularProgressIndicator(
+                        backgroundColor: Colors.white,
+                      ),
                     ),
                   );
                 }
               },
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class Pencegahan extends StatelessWidget {
-  // assets svg
-  final String avoid = 'assets/svg/avoid.svg';
-  final String disinfectan = 'assets/svg/disinfectan.svg';
-  final String keepClean = 'assets/svg/keep_clean.svg';
-  final String symptompsAware = 'assets/svg/symptoms_aware.svg';
-
-  const Pencegahan({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(right: 25, left: 25),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Column(
-            children: [
-              SvgPicture.asset(avoid),
-              SizedBox(
-                height: 5,
-              ),
-              Text(
-                "Avoid",
-                style: textPencegahan,
-              ),
-            ],
-          ),
-          Column(
-            children: [
-              SvgPicture.asset(symptompsAware),
-              SizedBox(
-                height: 5,
-              ),
-              Text(
-                "Symptoms Aware",
-                style: textPencegahan,
-              ),
-            ],
-          ),
-          Column(
-            children: [
-              SvgPicture.asset(disinfectan),
-              SizedBox(
-                height: 5,
-              ),
-              Text(
-                "Disinfectan",
-                style: textPencegahan,
-              ),
-            ],
-          ),
-          Column(
-            children: [
-              SvgPicture.asset(keepClean),
-              SizedBox(
-                height: 5,
-              ),
-              Text(
-                "Keep Clean",
-                style: textPencegahan,
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class MedicalHelp extends StatelessWidget {
-  final String medical = 'assets/svg/medical.svg';
-  final String virus = 'assets/svg/virus.svg';
-  const MedicalHelp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        width: 365,
-        height: 136,
-        child: Card(
-          elevation: 2,
-          child: Row(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(left: 5),
-              ),
-              Column(
-                children: [
-                  SvgPicture.asset(medical),
-                ],
-              ),
-              Column(
-                children: [
-                  SizedBox(
-                    height: 40,
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        "Dial 119 For\nMedical Help!",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        "Dial 119 For nMedical Help!",
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.all(5),
-                  ),
-                  SvgPicture.asset(virus),
-                ],
-              )
-            ],
-          ),
         ),
       ),
     );
