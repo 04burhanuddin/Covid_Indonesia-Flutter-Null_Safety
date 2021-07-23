@@ -1,5 +1,5 @@
-import 'package:covid_indonesia/themes/themes.dart';
 import 'package:flutter/material.dart';
+import 'package:covid_indonesia/themes/themes.dart';
 
 class PeopleCard extends StatelessWidget {
   const PeopleCard({
