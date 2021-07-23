@@ -1,4 +1,4 @@
-part of 'widget.dart';
+part of 'widgets.dart';
 
 Future<DataIndonesia> getDataIndonesia() async {
   var dio = Dio();

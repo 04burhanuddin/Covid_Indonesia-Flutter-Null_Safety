@@ -1,4 +1,4 @@
-part of 'widget.dart';
+part of 'widgets.dart';
 
 class PeopleCard extends StatelessWidget {
   const PeopleCard({

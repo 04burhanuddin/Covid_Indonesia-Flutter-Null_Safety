@@ -1,4 +1,4 @@
-part of 'widget.dart';
+part of 'widgets.dart';
 
 class CircularIndicator extends StatelessWidget {
   const CircularIndicator({
