@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:covid_indonesia/themes/themes.dart';
+part of 'widget.dart';
 
 class Tittle extends StatelessWidget {
   const Tittle({

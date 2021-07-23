@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+part of 'widget.dart';
 
 class MedicalHelp extends StatelessWidget {
   // assets svg
@@ -47,7 +46,7 @@ class MedicalHelp extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "Dial 119 For Medical Help!",
+                        "if any symptoms appear",
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.w500,

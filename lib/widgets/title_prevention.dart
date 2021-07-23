@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'widget.dart';
 
 class TitlePrevention extends StatelessWidget {
   const TitlePrevention({

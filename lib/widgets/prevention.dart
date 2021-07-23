@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:covid_indonesia/themes/themes.dart';
+part of 'widget.dart';
 
 class Pencegahan extends StatelessWidget {
   // assets svg

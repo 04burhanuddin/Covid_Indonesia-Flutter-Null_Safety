@@ -1,12 +1,4 @@
-import 'dart:async';
-import 'package:flutter/material.dart';
-import 'package:covid_indonesia/widgets/title.dart';
-import 'package:covid_indonesia/themes/themes.dart';
-import 'package:covid_indonesia/widgets/card_data.dart';
-import 'package:covid_indonesia/widgets/prevention.dart';
-import 'package:covid_indonesia/widgets/medical_help.dart';
-import 'package:covid_indonesia/model/indonesia_cases.dart';
-import 'package:covid_indonesia/widgets/title_prevention.dart';
+part of 'pages.dart';
 
 class HomeApp extends StatefulWidget {
   const HomeApp({Key? key}) : super(key: key);
@@ -36,33 +28,22 @@ class _HomeAppState extends State<HomeApp> {
             begin: FractionalOffset(0.5, 0.5),
             end: FractionalOffset(0.5, 0.1),
             stops: [0.0, 0.0],
-            // tileMode: TileMode.repeated,
           ),
         ),
         child: Column(
           children: [
             Column(
               children: [
-                SizedBox(
-                  height: 100,
-                ),
+                SizedBox(height: 100),
                 Tittle(),
-                SizedBox(
-                  height: 15,
-                ),
+                SizedBox(height: 15),
                 CardDataCovid(
                     dataIndonesia: dataIndonesia, textPeople: textPeople),
-                SizedBox(
-                  height: 20,
-                ),
+                SizedBox(height: 20),
                 TitlePrevention(),
-                SizedBox(
-                  height: 15,
-                ),
+                SizedBox(height: 15),
                 Pencegahan(),
-                SizedBox(
-                  height: 30,
-                ),
+                SizedBox(height: 30),
                 MedicalHelp(),
               ],
             ),

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'widget.dart';
 
 class CircularIndicator extends StatelessWidget {
   const CircularIndicator({
