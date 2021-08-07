@@ -10,16 +10,9 @@ class SplashScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          SizedBox(
-            height: 330,
-          ),
-          SvgPicture.asset(
-            logo,
-            height: 125,
-          ),
-          SizedBox(
-            height: 10,
-          ),
+          SizedBox(height: 330),
+          SvgPicture.asset(logo, height: 125),
+          SizedBox(height: 10),
           Center(
             child: Text(
               "Coronavirus Global\n & Indonesia Live Data",

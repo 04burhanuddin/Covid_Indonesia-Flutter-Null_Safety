@@ -13,15 +13,12 @@ class GoGlobalCases extends StatelessWidget {
         Container(
           height: 10,
           child: FloatingActionButton(
-            backgroundColor: gradientStrt,
+            backgroundColor: red,
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => GlobalCasesPage()));
             },
-            child: Icon(
-              Icons.bubble_chart_rounded,
-              size: 40.0,
-            ),
+            child: Icon(Icons.bubble_chart_rounded, size: 40.0),
           ),
         )
       ],

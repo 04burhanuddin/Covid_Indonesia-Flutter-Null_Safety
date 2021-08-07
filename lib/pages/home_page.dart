@@ -8,7 +8,6 @@ class HomeApp extends StatefulWidget {
 }
 
 class _HomeAppState extends State<HomeApp> {
-  final String textPeople = "People";
   late Future<DataIndonesia> dataIndonesia;
 
   @override
@@ -24,7 +23,7 @@ class _HomeAppState extends State<HomeApp> {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [gradientEnd, gradientStrt],
+            colors: [white, red],
             begin: FractionalOffset(0.5, 0.5),
             end: FractionalOffset(0.5, 0.1),
             stops: [0.0, 0.0],
@@ -40,7 +39,9 @@ class _HomeAppState extends State<HomeApp> {
                 Tittle(),
                 SizedBox(height: 15),
                 CardDataCovid(
-                    dataIndonesia: dataIndonesia, textPeople: textPeople),
+                  dataIndonesia: dataIndonesia,
+                  textPeople: textPeople,
+                ),
                 SizedBox(height: 10),
                 TitlePrevention(),
                 SizedBox(height: 15),

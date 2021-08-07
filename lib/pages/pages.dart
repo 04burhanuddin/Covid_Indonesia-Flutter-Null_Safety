@@ -1,5 +1,4 @@
 import 'package:covid_indonesia/model/global_cases.dart';
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:covid_indonesia/themes/themes.dart';
 import 'package:covid_indonesia/widgets/widgets.dart';

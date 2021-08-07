@@ -14,15 +14,10 @@ class PeopleCard extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 15),
-          child: Icon(
-            Icons.people_alt_sharp,
-            size: 11,
-          ),
+          child: Icon(Icons.people_alt_sharp, size: 11),
         ),
         Padding(
-          padding: const EdgeInsets.only(
-            left: 5,
-          ),
+          padding: const EdgeInsets.only(left: 5),
           child: Text(
             textPeople,
             style: textCard,

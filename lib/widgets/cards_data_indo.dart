@@ -1,5 +1,6 @@
 part of 'widgets.dart';
 
+// get local data indonesias
 Future<DataIndonesia> getDataIndonesia() async {
   var dio = Dio();
   final response = await dio.get('https://api.kawalcorona.com/indonesia/');
@@ -43,9 +44,7 @@ class CardDataCovid extends StatelessWidget {
             elevation: 9,
             child: Column(
               children: [
-                SizedBox(
-                  height: 33,
-                ),
+                SizedBox(height: 33),
                 Row(
                   children: [
                     Padding(
@@ -57,15 +56,13 @@ class CardDataCovid extends StatelessWidget {
                       "Positive",
                       style: TextStyle(
                         fontSize: 12,
-                        color: textPositif,
+                        color: red,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 Row(
                   children: [
                     FutureBuilder<DataIndonesia>(
@@ -88,9 +85,7 @@ class CardDataCovid extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 PeopleCard(textPeople: textPeople),
               ],
             ),
@@ -106,29 +101,23 @@ class CardDataCovid extends StatelessWidget {
             elevation: 9,
             child: Column(
               children: [
-                SizedBox(
-                  height: 33,
-                ),
+                SizedBox(height: 33),
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(
-                        left: 15,
-                      ),
+                      padding: const EdgeInsets.only(left: 15),
                     ),
                     Text(
                       "Active",
                       style: TextStyle(
                         fontSize: 12,
-                        color: textDirawat,
+                        color: blue,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 Row(
                   children: [
                     FutureBuilder<DataIndonesia>(
@@ -136,9 +125,7 @@ class CardDataCovid extends StatelessWidget {
                       builder: (context, snapshot) {
                         if (snapshot.hasData) {
                           return Padding(
-                            padding: const EdgeInsets.only(
-                              left: 15,
-                            ),
+                            padding: const EdgeInsets.only(left: 15),
                             child: Text(
                               snapshot.data!.dirawat,
                               style: dirawat,
@@ -151,9 +138,7 @@ class CardDataCovid extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 PeopleCard(textPeople: textPeople),
               ],
             ),
@@ -169,29 +154,23 @@ class CardDataCovid extends StatelessWidget {
             elevation: 9,
             child: Column(
               children: [
-                SizedBox(
-                  height: 33,
-                ),
+                SizedBox(height: 33),
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(
-                        left: 15,
-                      ),
+                      padding: const EdgeInsets.only(left: 15),
                     ),
                     Text(
                       "Recovered",
                       style: TextStyle(
                         fontSize: 12,
-                        color: textSembuh,
+                        color: green,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 Row(
                   children: [
                     FutureBuilder<DataIndonesia>(
@@ -199,9 +178,7 @@ class CardDataCovid extends StatelessWidget {
                       builder: (context, snapshot) {
                         if (snapshot.hasData) {
                           return Padding(
-                            padding: const EdgeInsets.only(
-                              left: 15,
-                            ),
+                            padding: const EdgeInsets.only(left: 15),
                             child: Text(
                               snapshot.data!.sembuh,
                               style: sembuh,
@@ -214,9 +191,7 @@ class CardDataCovid extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 PeopleCard(textPeople: textPeople),
               ],
             ),
@@ -232,29 +207,23 @@ class CardDataCovid extends StatelessWidget {
             elevation: 9,
             child: Column(
               children: [
-                SizedBox(
-                  height: 33,
-                ),
+                SizedBox(height: 33),
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(
-                        left: 15,
-                      ),
+                      padding: const EdgeInsets.only(left: 15),
                     ),
                     Text(
                       "Death",
                       style: TextStyle(
                         fontSize: 12,
-                        color: textMeniggal,
+                        color: yellow,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 Row(
                   children: [
                     FutureBuilder<DataIndonesia>(
@@ -275,9 +244,7 @@ class CardDataCovid extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 PeopleCard(textPeople: textPeople),
               ],
             ),

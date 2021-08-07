@@ -1,9 +1,6 @@
 part of 'widgets.dart';
 
 class MedicalHelp extends StatelessWidget {
-  // assets svg
-  final String medical = 'assets/svg/medical.svg';
-  final String virus = 'assets/svg/virus.svg';
   const MedicalHelp({Key? key}) : super(key: key);
 
   @override
@@ -18,17 +15,12 @@ class MedicalHelp extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  SvgPicture.asset(
-                    medical,
-                    height: 110,
-                  ),
+                  SvgPicture.asset(medical, height: 110),
                 ],
               ),
               Column(
                 children: [
-                  SizedBox(
-                    height: 30,
-                  ),
+                  SizedBox(height: 30),
                   Row(
                     children: [
                       Text(
@@ -40,9 +32,7 @@ class MedicalHelp extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
-                    height: 12,
-                  ),
+                  SizedBox(height: 12),
                   Padding(
                     padding: const EdgeInsets.only(left: 20),
                     child: Row(
@@ -62,10 +52,7 @@ class MedicalHelp extends StatelessWidget {
               Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(
-                      left: 0,
-                      top: 10,
-                    ),
+                    padding: EdgeInsets.only(left: 0, top: 10),
                   ),
                   SvgPicture.asset(virus),
                 ],

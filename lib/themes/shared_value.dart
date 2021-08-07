@@ -1,61 +1,66 @@
 part of 'themes.dart';
 
+// text
 final String textPeople = "People";
+// assets svg
+final String maps = 'assets/svg/maps.svg';
+final String virus = 'assets/svg/virus.svg';
+final String avoid = 'assets/svg/avoid.svg';
+final String medical = 'assets/svg/medical.svg';
+final String keepClean = 'assets/svg/keep_clean.svg';
+final String disinfectan = 'assets/svg/disinfectan.svg';
+final String symptompsAware = 'assets/svg/symptoms_aware.svg';
 
-// colors
-Color textColor = Colors.black;
-Color textPositif = Colors.red;
-Color textDirawat = Colors.blue;
-Color textSembuh = Colors.green;
-Color textMeniggal = Color(0xFFFBC02D);
-Color gradientStrt = Color(0xffF04141);
-Color gradientEnd = Colors.white;
-Color colorCard = Colors.white;
+// costum colors
+Color red = Color(0xFFF04141);
+Color blue = Color(0xFF6562F3);
+Color green = Color(0xFF4ABC55);
+Color white = Color(0xFFFFFFFF);
+Color black = Color(0xFF303030);
+Color yellow = Color(0xFFFBC02D);
 
-// text title
+// style text in card local data indonesia
 TextStyle textndonesia = GoogleFonts.roboto(
   fontSize: 20,
   color: Colors.white,
   fontWeight: FontWeight.w700,
 );
-
-// Text in card gridView
 TextStyle positif = GoogleFonts.roboto(
   fontSize: 17,
-  color: textPositif,
+  color: red,
   fontWeight: FontWeight.w500,
 );
 TextStyle sembuh = GoogleFonts.roboto(
   fontSize: 17,
-  color: textSembuh,
+  color: green,
   fontWeight: FontWeight.w500,
 );
 TextStyle dirawat = GoogleFonts.roboto(
   fontSize: 17,
-  color: textDirawat,
+  color: blue,
   fontWeight: FontWeight.w500,
 );
 TextStyle meninggal = GoogleFonts.roboto(
   fontSize: 17,
-  color: textMeniggal,
+  color: yellow,
   fontWeight: FontWeight.w500,
 );
 TextStyle textCard = GoogleFonts.roboto(
   fontSize: 11,
-  color: textColor,
+  color: red,
 );
 
 // Text row pencegahan
 TextStyle textPencegahan = GoogleFonts.roboto(
   fontSize: 11,
-  color: textColor,
+  color: red,
   fontWeight: FontWeight.w400,
 );
 
 // splash
 TextStyle textLogo = GoogleFonts.roboto(
   fontSize: 15,
-  color: gradientStrt,
+  color: red,
   fontWeight: FontWeight.w400,
 );
 TextStyle textCardGlobal = GoogleFonts.roboto(
@@ -63,7 +68,6 @@ TextStyle textCardGlobal = GoogleFonts.roboto(
   color: Colors.white,
   fontWeight: FontWeight.w400,
 );
-
 TextStyle textDataGlobal = GoogleFonts.roboto(
   fontSize: 20,
   color: Colors.white,
