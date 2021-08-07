@@ -11,44 +11,44 @@ class MedicalHelp extends StatelessWidget {
     return Center(
       child: Container(
         width: 365,
-        height: 136,
+        height: 120,
         child: Card(
           elevation: 2,
           child: Row(
             children: [
-              Padding(
-                padding: EdgeInsets.only(left: 5),
-              ),
               Column(
                 children: [
-                  SvgPicture.asset(medical),
+                  SvgPicture.asset(
+                    medical,
+                    height: 110,
+                  ),
                 ],
               ),
               Column(
                 children: [
-                  SizedBox(
-                    height: 40,
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        "Dial 119 For\nMedical Help!",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      )
-                    ],
-                  ),
                   SizedBox(
                     height: 30,
                   ),
                   Row(
                     children: [
                       Text(
+                        "Dial 119 For\nMedical Help!",
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  Row(
+                    children: [
+                      Text(
                         "if any symptoms appear",
                         style: TextStyle(
-                          fontSize: 15,
+                          fontSize: 12,
                           fontWeight: FontWeight.w500,
                         ),
                       ),

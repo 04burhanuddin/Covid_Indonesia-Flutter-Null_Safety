@@ -30,9 +30,9 @@ class CardDataCovid extends StatelessWidget {
       height: 355,
       child: GridView.count(
         primary: false,
-        padding: const EdgeInsets.all(16),
-        crossAxisSpacing: 10,
-        mainAxisSpacing: 10,
+        padding: const EdgeInsets.all(30),
+        crossAxisSpacing: 9,
+        mainAxisSpacing: 9,
         crossAxisCount: 2,
         children: [
           // Positif
@@ -56,7 +56,7 @@ class CardDataCovid extends StatelessWidget {
                     Text(
                       "Positive",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 12,
                         color: textPositif,
                         fontWeight: FontWeight.w600,
                       ),
@@ -119,7 +119,7 @@ class CardDataCovid extends StatelessWidget {
                     Text(
                       "Active",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 12,
                         color: textDirawat,
                         fontWeight: FontWeight.w600,
                       ),
@@ -182,7 +182,7 @@ class CardDataCovid extends StatelessWidget {
                     Text(
                       "Recovered",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 12,
                         color: textSembuh,
                         fontWeight: FontWeight.w600,
                       ),
@@ -245,7 +245,7 @@ class CardDataCovid extends StatelessWidget {
                     Text(
                       "Death",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 12,
                         color: textMeniggal,
                         fontWeight: FontWeight.w600,
                       ),

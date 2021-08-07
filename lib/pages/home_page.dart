@@ -39,11 +39,11 @@ class _HomeAppState extends State<HomeApp> {
                 SizedBox(height: 15),
                 CardDataCovid(
                     dataIndonesia: dataIndonesia, textPeople: textPeople),
-                SizedBox(height: 20),
+                SizedBox(height: 10),
                 TitlePrevention(),
                 SizedBox(height: 15),
                 Pencegahan(),
-                SizedBox(height: 30),
+                SizedBox(height: 15),
                 MedicalHelp(),
               ],
             ),
