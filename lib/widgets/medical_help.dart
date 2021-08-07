@@ -43,23 +43,29 @@ class MedicalHelp extends StatelessWidget {
                   SizedBox(
                     height: 12,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        "if any symptoms appear",
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Row(
+                      children: [
+                        Text(
+                          "if any symptoms appear",
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ],
               ),
               Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.all(5),
+                    padding: EdgeInsets.only(
+                      left: 0,
+                      top: 10,
+                    ),
                   ),
                   SvgPicture.asset(virus),
                 ],

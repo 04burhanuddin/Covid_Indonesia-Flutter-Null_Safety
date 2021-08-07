@@ -16,7 +16,7 @@ class PeopleCard extends StatelessWidget {
           padding: const EdgeInsets.only(left: 15),
           child: Icon(
             Icons.people_alt_sharp,
-            size: 15,
+            size: 11,
           ),
         ),
         Padding(

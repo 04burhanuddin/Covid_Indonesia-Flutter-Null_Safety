@@ -1,5 +1,7 @@
 part of 'themes.dart';
 
+final String textPeople = "People";
+
 // colors
 Color textColor = Colors.black;
 Color textPositif = Colors.red;
@@ -12,9 +14,9 @@ Color colorCard = Colors.white;
 
 // text title
 TextStyle textndonesia = GoogleFonts.roboto(
-  fontSize: 15,
+  fontSize: 20,
   color: Colors.white,
-  fontWeight: FontWeight.bold,
+  fontWeight: FontWeight.w700,
 );
 
 // Text in card gridView
@@ -39,7 +41,7 @@ TextStyle meninggal = GoogleFonts.roboto(
   fontWeight: FontWeight.w500,
 );
 TextStyle textCard = GoogleFonts.roboto(
-  fontSize: 12,
+  fontSize: 11,
   color: textColor,
 );
 
@@ -47,5 +49,28 @@ TextStyle textCard = GoogleFonts.roboto(
 TextStyle textPencegahan = GoogleFonts.roboto(
   fontSize: 11,
   color: textColor,
+  fontWeight: FontWeight.w400,
+);
+
+// splash
+TextStyle textLogo = GoogleFonts.roboto(
+  fontSize: 15,
+  color: gradientStrt,
+  fontWeight: FontWeight.w400,
+);
+TextStyle textCardGlobal = GoogleFonts.roboto(
+  fontSize: 15,
+  color: Colors.white,
+  fontWeight: FontWeight.w400,
+);
+
+TextStyle textDataGlobal = GoogleFonts.roboto(
+  fontSize: 20,
+  color: Colors.white,
+  fontWeight: FontWeight.w400,
+);
+TextStyle textPeopleGlobal = GoogleFonts.roboto(
+  fontSize: 12,
+  color: Colors.white,
   fontWeight: FontWeight.w400,
 );

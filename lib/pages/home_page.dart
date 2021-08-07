@@ -34,7 +34,9 @@ class _HomeAppState extends State<HomeApp> {
           children: [
             Column(
               children: [
-                SizedBox(height: 100),
+                SizedBox(height: 50),
+                GoGlobalCases(),
+                SizedBox(height: 30),
                 Tittle(),
                 SizedBox(height: 15),
                 CardDataCovid(
@@ -43,7 +45,7 @@ class _HomeAppState extends State<HomeApp> {
                 TitlePrevention(),
                 SizedBox(height: 15),
                 Pencegahan(),
-                SizedBox(height: 15),
+                SizedBox(height: 18),
                 MedicalHelp(),
               ],
             ),

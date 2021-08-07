@@ -13,12 +13,23 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return FutureBuilder(
+      future: Future.delayed(
+        Duration(seconds: 10),
       ),
-      home: HomeApp(),
+      builder: (context, AsyncSnapshot snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: SplashScreen(),
+          );
+        } else {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: HomeApp(),
+          );
+        }
+      },
     );
   }
 }
