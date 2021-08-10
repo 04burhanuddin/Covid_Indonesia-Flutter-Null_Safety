@@ -4,7 +4,6 @@ part of 'widgets.dart';
 Future<DataIndonesia> getDataIndonesia() async {
   var dio = Dio();
   final response = await dio.get('https://api.kawalcorona.com/indonesia/');
-  print(response.data);
   if (response.statusCode == 200) {
     return DataIndonesia.fromJson(
       response.data[0],

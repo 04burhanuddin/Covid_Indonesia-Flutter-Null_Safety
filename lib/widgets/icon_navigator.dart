@@ -13,7 +13,7 @@ class GoGlobalCases extends StatelessWidget {
         Container(
           height: 10,
           child: FloatingActionButton(
-            backgroundColor: red,
+            backgroundColor: white,
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => GlobalCasesPage()));

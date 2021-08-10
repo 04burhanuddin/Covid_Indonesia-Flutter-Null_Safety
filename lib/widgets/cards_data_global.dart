@@ -4,7 +4,6 @@ part of 'widgets.dart';
 Future<GlobalData> globalPositif() async {
   var dio = Dio();
   final response = await dio.get('https://api.kawalcorona.com/positif');
-  print(response.data);
   if (response.statusCode == 200) {
     return GlobalData.fromJson(
       response.data,
@@ -18,7 +17,6 @@ Future<GlobalData> globalPositif() async {
 Future<GlobalData> globalRecovered() async {
   var dio = Dio();
   final response = await dio.get('https://api.kawalcorona.com/sembuh');
-  print(response.data);
   if (response.statusCode == 200) {
     return GlobalData.fromJson(
       response.data,
@@ -32,7 +30,6 @@ Future<GlobalData> globalRecovered() async {
 Future<GlobalData> globalDeath() async {
   var dio = Dio();
   final response = await dio.get('https://api.kawalcorona.com/meninggal');
-  print(response.data);
   if (response.statusCode == 200) {
     return GlobalData.fromJson(
       response.data,

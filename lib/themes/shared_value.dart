@@ -26,34 +26,34 @@ TextStyle textndonesia = GoogleFonts.roboto(
   fontWeight: FontWeight.w700,
 );
 TextStyle positif = GoogleFonts.roboto(
-  fontSize: 17,
+  fontSize: 18,
   color: red,
   fontWeight: FontWeight.w500,
 );
 TextStyle sembuh = GoogleFonts.roboto(
-  fontSize: 17,
+  fontSize: 18,
   color: green,
   fontWeight: FontWeight.w500,
 );
 TextStyle dirawat = GoogleFonts.roboto(
-  fontSize: 17,
+  fontSize: 18,
   color: blue,
   fontWeight: FontWeight.w500,
 );
 TextStyle meninggal = GoogleFonts.roboto(
-  fontSize: 17,
+  fontSize: 18,
   color: yellow,
   fontWeight: FontWeight.w500,
 );
 TextStyle textCard = GoogleFonts.roboto(
   fontSize: 11,
-  color: red,
+  color: black,
 );
 
 // Text row pencegahan
 TextStyle textPencegahan = GoogleFonts.roboto(
   fontSize: 11,
-  color: red,
+  color: black,
   fontWeight: FontWeight.w400,
 );
 
