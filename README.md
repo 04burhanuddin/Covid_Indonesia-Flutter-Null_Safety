@@ -3,61 +3,15 @@
 
 Dibuat Dengam : 
 - Flutter Version : `Flutter 2.2.3 • channel stable` Null Safety
-- VS Code
+- SDK Version : `sdk: ">=2.12.0 <3.0.0"`
+- Editor : Visual Studio Code
 ## Halaman Dashboard
-UI HashData & HasError from internet
+- UI HashData & HasError from internet
 
-<img src="assets/readme/has_data.jpg" width="260px"> <img src="assets/readme/has_error.jpg" width="260px">
-## API Spec
+    <img src="assets/readme/HomeApp.png" width="260px"> <img src="assets/readme/GlobalCases.png" width="260px">
 
-GET Data Indonesia :
-- Method : GET
-- Endpoint : `https://api.kawalcorona.com/indonesia`
-- Response :
-    ```json
-    [
-        {
-            "name" : "String",
-            "positif" : "String",
-            "sembuh" : "String",
-            "meninggal" : "Stringr",
-            "dirawat" : "String"
-        }
-    ]
-GET Data Global Positif :
-- Method : GET
-- Endpoint : `https://api.kawalcorona.com/positif`
-- Response :
-    ```json
-    {
-        "name": "Total Positif",
-        "value": "201,755,323"
-    }
-    ```
-GET Data Global Sembuh :
-- Method : GET
-- Endpoint : `https://api.kawalcorona.com/sembuh`
-- Response :
-    ```json
-    {
-        "name": "Total Sembuh",
-        "value": "0"
-        }
-    ```
-GET Data Global Meninggal :
-- Method : GET
-- Endpoint : `https://api.kawalcorona.com/meninggal`
-- Response :
-    ```json
-    {
-        "name": "Total Meninggal",
-        "value": "4,278,398"
-    }
-    ```
+- UI Has Error (Network Connection Time Out)
+
+    <img src="assets/readme/Has_Error1.png" width="260px"> <img src="assets/readme/Has_Error2.png" width="260px">
 
 ## Happy Coding &#x1F4AA; 
-
-<!-- Require -->
-
-TODO : Add splash screen
-TODO : Add Global casus
