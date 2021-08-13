@@ -54,7 +54,7 @@ class CardDataCovid extends StatelessWidget {
                     Text(
                       "Positive",
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 13,
                         color: red,
                         fontWeight: FontWeight.w600,
                       ),
@@ -109,7 +109,7 @@ class CardDataCovid extends StatelessWidget {
                     Text(
                       "Active",
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 13,
                         color: blue,
                         fontWeight: FontWeight.w600,
                       ),
@@ -162,7 +162,7 @@ class CardDataCovid extends StatelessWidget {
                     Text(
                       "Recovered",
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 13,
                         color: green,
                         fontWeight: FontWeight.w600,
                       ),
@@ -215,7 +215,7 @@ class CardDataCovid extends StatelessWidget {
                     Text(
                       "Death",
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 13,
                         color: yellow,
                         fontWeight: FontWeight.w600,
                       ),

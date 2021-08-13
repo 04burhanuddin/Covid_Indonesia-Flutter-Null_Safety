@@ -44,19 +44,21 @@ class MedicalHelp extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
+                        // SvgPicture.asset(virus),
                       ],
                     ),
                   ),
                 ],
               ),
-              Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(left: 0, top: 10),
-                  ),
-                  SvgPicture.asset(virus),
-                ],
-              )
+              Padding(
+                padding: const EdgeInsets.only(left: 20, top: 10),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    SvgPicture.asset(virus),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

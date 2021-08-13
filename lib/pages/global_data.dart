@@ -23,7 +23,10 @@ class _GlobalCasesPageState extends State<GlobalCasesPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: red,
-        title: Text("Global Cases"),
+        title: Text(
+          "Global Cases",
+          style: TextStyle(fontSize: 15),
+        ),
         centerTitle: true,
       ),
       body: Column(

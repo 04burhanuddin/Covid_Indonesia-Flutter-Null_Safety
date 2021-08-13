@@ -10,17 +10,17 @@ class GoGlobalCases extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        Container(
-          height: 10,
-          child: FloatingActionButton(
-            backgroundColor: white,
+        Padding(
+          padding: const EdgeInsets.only(right: 10),
+          child: IconButton(
+            icon: const Icon(Icons.language_rounded, size: 30.0),
+            color: Colors.white,
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => GlobalCasesPage()));
             },
-            child: Icon(Icons.bubble_chart_rounded, size: 40.0),
           ),
-        )
+        ),
       ],
     );
   }
