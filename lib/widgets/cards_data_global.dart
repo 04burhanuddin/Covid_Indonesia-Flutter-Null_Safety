@@ -52,137 +52,132 @@ class CardDouble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 16, right: 16),
-      child: Row(
-        children: [
+    return Container(
+      height: 131,
+      child: GridView.count(
+        primary: false,
+        padding: const EdgeInsets.only(left: 20, right: 20, top: 5),
+        crossAxisSpacing: 8,
+        mainAxisSpacing: 8,
+        crossAxisCount: 2,
+        children: <Widget>[
           Container(
-            height: 131,
-            width: 189,
-            child: Card(
-              color: green,
-              elevation: 2,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 18, left: 19),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(height: 10),
-                        Text("Total Recovered", style: textCardGlobal),
-                        SizedBox(height: 9),
-                        Row(
-                          children: [
-                            FutureBuilder<GlobalData>(
-                              future: dataGlobalSembuh,
-                              builder: (context, snapshot) {
-                                if (snapshot.hasData) {
-                                  return Padding(
-                                    padding: const EdgeInsets.only(left: 4),
-                                    child: Text(
-                                      snapshot.data!.value,
-                                      style: textDataGlobal,
-                                    ),
-                                  );
-                                } else {
-                                  return CircularIndicator();
-                                }
-                              },
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 18, left: 19),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 10),
+                      Text("Total Recovered", style: textCardGlobal),
+                      SizedBox(height: 9),
+                      Row(
+                        children: [
+                          FutureBuilder<GlobalData>(
+                            future: dataGlobalSembuh,
+                            builder: (context, snapshot) {
+                              if (snapshot.hasData) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(left: 4),
+                                  child: Text(
+                                    snapshot.data!.value,
+                                    style: textDataGlobal,
+                                  ),
+                                );
+                              } else {
+                                return CircularIndicator();
+                              }
+                            },
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 9),
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 4),
+                            child: Icon(
+                              Icons.people_alt_sharp,
+                              size: 12,
+                              color: Colors.white,
                             ),
-                          ],
-                        ),
-                        SizedBox(height: 9),
-                        Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(left: 4),
-                              child: Icon(
-                                Icons.people_alt_sharp,
-                                size: 12,
-                                color: Colors.white,
-                              ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 5),
+                            child: Text(
+                              textPeople,
+                              style: textPeopleGlobal,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 5),
-                              child: Text(
-                                textPeople,
-                                style: textPeopleGlobal,
-                              ),
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
+                          ),
+                        ],
+                      )
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
+            color: green,
           ),
           Container(
-            height: 131,
-            width: 189,
-            child: Card(
-              color: yellow,
-              elevation: 2,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 18, left: 19),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(height: 10),
-                        Text("Total Death", style: textCardGlobal),
-                        SizedBox(height: 9),
-                        Row(
-                          children: [
-                            FutureBuilder<GlobalData>(
-                              future: dataGlobalMeninggal,
-                              builder: (context, snapshot) {
-                                if (snapshot.hasData) {
-                                  return Padding(
-                                    padding: const EdgeInsets.only(left: 4),
-                                    child: Text(
-                                      snapshot.data!.value,
-                                      style: textDataGlobal,
-                                    ),
-                                  );
-                                } else {
-                                  return CircularIndicator();
-                                }
-                              },
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 18, left: 19),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 10),
+                      Text("Total Death", style: textCardGlobal),
+                      SizedBox(height: 9),
+                      Row(
+                        children: [
+                          FutureBuilder<GlobalData>(
+                            future: dataGlobalMeninggal,
+                            builder: (context, snapshot) {
+                              if (snapshot.hasData) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(left: 4),
+                                  child: Text(
+                                    snapshot.data!.value,
+                                    style: textDataGlobal,
+                                  ),
+                                );
+                              } else {
+                                return CircularIndicator();
+                              }
+                            },
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 9),
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 4),
+                            child: Icon(
+                              Icons.people_alt_sharp,
+                              size: 12,
+                              color: Colors.white,
                             ),
-                          ],
-                        ),
-                        SizedBox(height: 9),
-                        Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(left: 4),
-                              child: Icon(
-                                Icons.people_alt_sharp,
-                                size: 12,
-                                color: Colors.white,
-                              ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 5),
+                            child: Text(
+                              textPeople,
+                              style: textPeopleGlobal,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 5),
-                              child: Text(
-                                textPeople,
-                                style: textPeopleGlobal,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                          ),
+                        ],
+                      )
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
+            color: yellow,
           ),
         ],
       ),
@@ -204,12 +199,11 @@ class CardPositif extends StatelessWidget {
       width: 382,
       child: Card(
         color: red,
-        elevation: 2,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 18, left: 19),
+              padding: const EdgeInsets.only(top: 20, left: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
